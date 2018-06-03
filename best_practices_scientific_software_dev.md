@@ -85,13 +85,25 @@ assert variable.shape == (N, 1) and np.all(0 <= variable <= 1)
   * Useful test cases often include corner cases: 0, inf or nan values.
   * Comparison with a reference algorithm is a good option to enable testing more complex cases. For example, for nonlinear filtering algorithms, it is expected that they yield results equivalent to the standard linear Kalman filter *for linear examples*.
   * If the exact results are too difficult to compute, one can still check assumptions that should be fulfilled: dimensionality, value range, monotonicity, etc.
+  * Unit testing frameworks / tools are available for practically every language, e.g. [for Matlab](https://de.mathworks.com/help/matlab/matlab-unit-test-framework.html) and [for python](https://docs.python.org/3/library/unittest.html).
 
 
 ### 3. Stick to the pathfinder rule ###
- * Always respecting all of the above recommendations is *hard*.
+ * Always respecting all of the above recommendations is *hard* and consumes a lot of time, which you then don't have to perform actual research.
  * You want to work on good scientific results, not on perfect software quality, after all.
  * Try to improve things one at a time: When you notice something that isn't optimal, try to fix that one thing right now. Over time, your code quality will get better and better.
  * Make following good code practices a *habit*.
+
+### 4. Minimal Code Quality Checklist ###
+The following is a short list of some of the most essential essential requirements you should try to fulfill with your code. While certainly not complete, checking back with this list from time to time might make it easier for you to follow these best practices in your daily work.
+  - [ ] No section of your software is a black box to you that does things which you don't understand.
+  - [ ] There are no functions or scripts longer than can be displayed on a standard screen without scrolling (usually between 25 and 35 lines of code).
+  - [ ] File, function, and variable names are informative and follow a consistent naming scheme.
+  - [ ] Every step required to reproduce the analysis' final results is documented, or - even better - automated.
+  - [ ] Analysis results are saved or exported automatically.
+  - [ ] Assumptions, requirements and limitations are documented,and ideally also tested automatically.
+  - [ ] Examples are documented properly and reproducibly and are separated from actual algorithmic code.
+  - [ ] There is a Readme file that briefly summarizes project background, directory structure, code function, and steps required to run an analysis.
 
 &nbsp; 
 #### References ####
@@ -103,6 +115,6 @@ assert variable.shape == (N, 1) and np.all(0 <= variable <= 1)
 ---
 This document has been written in [Markdown][df1] using the [Dillinger web editor](https://dillinger.io). Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.
 
-Eike Petersen, May 2018.
+Eike Petersen, May/June 2018.
 
    [df1]: <http://daringfireball.net/projects/markdown/>
