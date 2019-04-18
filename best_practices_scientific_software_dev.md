@@ -45,7 +45,7 @@ When implementing complex scientific analyses, it can be very difficult to ensur
  * When analyses are complex, intuition about the validity of results is often lacking.
  * Often, there is no reference to compare with (since we're doing new research!).
  * When performing grouping results (i.e., calculating mean +/- standard deviation of results in a number of experiments or patients), it becomes impossible to judge whether individual results appear correct.
- * There can be very subtle and difficult to trace bugs that make results *appear* correct when they are not: Performing element-wise instead of matrix multiplication, accidentally reusing previous variable values, using sine instead of cosinde, etc.
+ * There can be very subtle and difficult to trace bugs that make results *appear* correct when they are not: Performing element-wise instead of matrix multiplication, accidentally reusing previous variable values, using sine instead of cosine, etc.
 
 *Really* making sure that everything works correctly is very hard, but there are some steps that can greatly increase both your own and your collaborators' confidence in the validity of your analyses:
  * **Understand what your code is doing.**
